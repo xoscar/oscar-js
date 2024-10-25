@@ -1,0 +1,42 @@
+{
+  "name": "@oscar-js/explain-my-trace",
+  "version": "0.0.1",
+  "description": "Explains a given openTelemetry Trace",
+  "keywords": [
+    "opentelemetry",
+    "explain"
+  ],
+  "author": "Oscar Reyes <oscar-rreyes1@hotmail.io>",
+  "homepage": "https://oscarreyes.me",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://oscarreyes.me"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/xoscar/oscar-js/issues"
+  },
+  "dependencies": {
+    "@langchain/openai": "^0.3.11",
+    "langchain": "^0.3.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.13"
+  }
+}

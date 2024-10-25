@@ -1,0 +1,587 @@
+{
+  "batches": [
+    {
+      "resource": {
+        "attributes": [
+          { "key": "telemetry.sdk.language", "value": { "stringValue": "nodejs" } },
+          { "key": "telemetry.sdk.name", "value": { "stringValue": "opentelemetry" } },
+          { "key": "telemetry.sdk.version", "value": { "stringValue": "1.26.0" } },
+          { "key": "process.pid", "value": { "intValue": 18 } },
+          { "key": "process.executable.name", "value": { "stringValue": "node" } },
+          { "key": "process.executable.path", "value": { "stringValue": "/usr/local/bin/node" } },
+          {
+            "key": "process.command_args",
+            "value": {
+              "stringValue": "[\"/usr/local/bin/node\",\"--require\",\"./telemetry/setup.js\",\"/app/api.js\"]"
+            }
+          },
+          { "key": "process.runtime.version", "value": { "stringValue": "20.17.0" } },
+          { "key": "process.runtime.name", "value": { "stringValue": "nodejs" } },
+          { "key": "process.runtime.description", "value": { "stringValue": "Node.js" } },
+          { "key": "process.command", "value": { "stringValue": "/app/api.js" } },
+          { "key": "process.owner", "value": { "stringValue": "root" } },
+          { "key": "host.name", "value": { "stringValue": "0a58ddf2fbef" } },
+          { "key": "host.arch", "value": { "stringValue": "arm64" } },
+          { "key": "service.name", "value": { "stringValue": "pokeshop" } }
+        ],
+        "droppedAttributesCount": 0
+      },
+      "instrumentationLibrarySpans": [
+        {
+          "spans": [
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "46bc3e326a1df631",
+              "parentSpanId": "6bbbd6b9344ce406",
+              "traceState": "",
+              "name": "validate request",
+              "kind": "SPAN_KIND_INTERNAL",
+              "startTimeUnixNano": 1729891137940000000,
+              "endTimeUnixNano": 1729891137940730400,
+              "attributes": [{ "key": "validation.is_valid", "value": { "boolValue": true } }],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" },
+              "events": [
+                {
+                  "timeUnixNano": 1729891137940028200,
+                  "attributes": [{ "key": "message", "value": { "stringValue": "validation started" } }],
+                  "droppedAttributesCount": 0,
+                  "name": ""
+                },
+                {
+                  "timeUnixNano": 1729891137940679700,
+                  "attributes": [
+                    { "key": "message", "value": { "stringValue": "request is valid" } },
+                    { "key": "validation.is_valid", "value": { "boolValue": true } }
+                  ],
+                  "droppedAttributesCount": 0,
+                  "name": ""
+                }
+              ]
+            }
+          ],
+          "instrumentationLibrary": { "name": "pokeshop", "version": "" }
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          { "key": "telemetry.sdk.language", "value": { "stringValue": "nodejs" } },
+          { "key": "telemetry.sdk.name", "value": { "stringValue": "opentelemetry" } },
+          { "key": "telemetry.sdk.version", "value": { "stringValue": "1.26.0" } },
+          { "key": "process.pid", "value": { "intValue": 18 } },
+          { "key": "process.executable.name", "value": { "stringValue": "node" } },
+          { "key": "process.executable.path", "value": { "stringValue": "/usr/local/bin/node" } },
+          {
+            "key": "process.command_args",
+            "value": {
+              "stringValue": "[\"/usr/local/bin/node\",\"--require\",\"./telemetry/setup.js\",\"/app/api.js\"]"
+            }
+          },
+          { "key": "process.runtime.version", "value": { "stringValue": "20.17.0" } },
+          { "key": "process.runtime.name", "value": { "stringValue": "nodejs" } },
+          { "key": "process.runtime.description", "value": { "stringValue": "Node.js" } },
+          { "key": "process.command", "value": { "stringValue": "/app/api.js" } },
+          { "key": "process.owner", "value": { "stringValue": "root" } },
+          { "key": "host.name", "value": { "stringValue": "0a58ddf2fbef" } },
+          { "key": "host.arch", "value": { "stringValue": "arm64" } },
+          { "key": "service.name", "value": { "stringValue": "pokeshop" } }
+        ],
+        "droppedAttributesCount": 0
+      },
+      "instrumentationLibrarySpans": [
+        {
+          "spans": [
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "443544d1de42bbe0",
+              "parentSpanId": "46bc3e326a1df631",
+              "traceState": "",
+              "name": "queue.synchronizePokemon publish",
+              "kind": "SPAN_KIND_PRODUCER",
+              "startTimeUnixNano": 1729891137941000000,
+              "endTimeUnixNano": 1729891137941224000,
+              "attributes": [
+                { "key": "messaging.system", "value": { "stringValue": "rabbitmq" } },
+                { "key": "messaging.url", "value": { "stringValue": "queue" } },
+                { "key": "net.peer.name", "value": { "stringValue": "queue" } },
+                { "key": "messaging.destination", "value": { "stringValue": "queue.synchronizePokemon" } },
+                { "key": "messaging.operation", "value": { "stringValue": "publish" } },
+                { "key": "messaging.payload", "value": { "stringValue": "{\"id\":30000,\"ignoreCache\":false}" } },
+                {
+                  "key": "messaging.header.traceparent",
+                  "value": { "stringValue": "[\"00-bf8640c6c3bb1a358af2ed297cb082ea-443544d1de42bbe0-01\"]" }
+                }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" }
+            },
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "6bbbd6b9344ce406",
+              "parentSpanId": "8930b7f6379d2e1e",
+              "traceState": "",
+              "name": "POST /pokemon/import?",
+              "kind": "SPAN_KIND_SERVER",
+              "startTimeUnixNano": 1729891137940000000,
+              "endTimeUnixNano": 1729891137941626400,
+              "attributes": [
+                { "key": "http.request.header.host", "value": { "stringValue": "[\"localhost:8081\"]" } },
+                { "key": "http.request.header.connection", "value": { "stringValue": "[\"keep-alive\"]" } },
+                { "key": "http.request.header.content_length", "value": { "stringValue": "[\"12\"]" } },
+                {
+                  "key": "http.request.header.traceparent",
+                  "value": { "stringValue": "[\"00-bf8640c6c3bb1a358af2ed297cb082ea-8930b7f6379d2e1e-01\"]" }
+                },
+                { "key": "http.request.header.sec_ch_ua_platform", "value": { "stringValue": "[\"\\\"macOS\\\"\"]" } },
+                {
+                  "key": "http.request.header.user_agent",
+                  "value": {
+                    "stringValue": "[\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36\"]"
+                  }
+                },
+                {
+                  "key": "http.request.header.sec_ch_ua",
+                  "value": {
+                    "stringValue": "[\"\\\"Brave\\\";v=\\\"129\\\", \\\"Not=A?Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"129\\\"\"]"
+                  }
+                },
+                { "key": "http.request.header.content_type", "value": { "stringValue": "[\"application/json\"]" } },
+                { "key": "http.request.header.sec_ch_ua_mobile", "value": { "stringValue": "[\"?0\"]" } },
+                { "key": "http.request.header.accept", "value": { "stringValue": "[\"*/*\"]" } },
+                { "key": "http.request.header.sec_gpc", "value": { "stringValue": "[\"1\"]" } },
+                { "key": "http.request.header.accept_language", "value": { "stringValue": "[\"en-US,en\"]" } },
+                { "key": "http.request.header.origin", "value": { "stringValue": "[\"http://localhost:8081\"]" } },
+                { "key": "http.request.header.sec_fetch_site", "value": { "stringValue": "[\"same-origin\"]" } },
+                { "key": "http.request.header.sec_fetch_mode", "value": { "stringValue": "[\"cors\"]" } },
+                { "key": "http.request.header.sec_fetch_dest", "value": { "stringValue": "[\"empty\"]" } },
+                { "key": "http.request.header.referer", "value": { "stringValue": "[\"http://localhost:8081/\"]" } },
+                {
+                  "key": "http.request.header.accept_encoding",
+                  "value": { "stringValue": "[\"gzip, deflate, br, zstd\"]" }
+                },
+                {
+                  "key": "http.request.header.cookie",
+                  "value": {
+                    "stringValue": "[\"argocd.token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3MTJmMzYyMzRiZTk3NTkxZTY5ZjcxYzRmMzJjZWNhNjVkNzk5NmYifQ.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2RleCIsInN1YiI6IkNnZ3hNVEExTVRBek1SSUdaMmwwYUhWaSIsImF1ZCI6ImFyZ28tY2QiLCJleHAiOjE3Mjg2Njc4ODQsImlhdCI6MTcyODU4MTQ4NCwiYXRfaGFzaCI6IkpfVzFQdU9zdHQ2dXJoRWlubC04VWciLCJjX2hhc2giOiJSQlVSaUU1Y2FfRE1MYzVBUlBYTWRRIiwiZW1haWwiOiJvc2Nhci1ycmV5ZXMxQGhvdG1haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImdyb3VwcyI6WyJrdWJlc2hvcDp0cmFjZXRlc3QtZGV2Il0sIm5hbWUiOiJPc2NhciBSZXllcyIsInByZWZlcnJlZF91c2VybmFtZSI6Inhvc2NhciJ9.GJ7H1kGvCV6rtHCYHCKTJ6MjgR7uqnXMlJHgCuxRGMuVnBqBbGYggns0bjlcO0NEWS7ljV9LteGpxPCaSkj9G3JCI41EGiBVqL05wxFlrBAFZm4f4kQbmEsJ492QlNgUL_JLTm6wAa7stRjA8GEVl7rftTiTRUZhcMUyGJUgglgX7a8lIJ8--gINry7QYxfbXcHyuTf2T88QnI2FWYYWYpW75Hhq6gZ7UZAC-0sAnPO2WgPUWtnWnQ2CVsTJ1RRZsxh8F5fG2xe9gEAdRv9fjDkE_NCPsnMUnNEz4gkUNsDeQAx9jYYwKxLJIhuv65fH7a7YFqypwmArWLT6GrIhMA; knownVisitor=true; ory_kratos_continuity=MTcyOTYxNzkzMHxEWDhFQVFMX2dBQUJFQUVRQUFCZl80QUFBUVp6ZEhKcGJtY01Jd0FoYjNKNVgydHlZWFJ2YzE5dmFXUmpYMkYxZEdoZlkyOWtaVjl6WlhOemFXOXVCbk4wY21sdVp3d21BQ1F6TjJZNE9UUmpPQzAwTldRM0xUUXlOR1l0T0dVMU5pMHhNVGhtTTJFMk9EbGlOV1E9fNSdOJ4T7NB22kFxinzPenC617afEyCyjOD9JXdFkGhx; csrf_token_aee2ad8e2a7f0047f7b720027ff2f7953484eb7c2dc896e51d0206002ea7a67f=bOpvYjJUNTVkd1R31e5gh7UU+jdhTPnlJfCYgSTeR6k=; ph_1234567890_posthog=%7B%22distinct_id%22%3A%2218d7da57-0caf-43de-882b-3fcb860667ac%22%2C%22%24sesid%22%3A%5B1729623688578%2C%220192b59b-0582-7312-b638-8f20b4a1c98a%22%2C1729623688578%5D%2C%22%24epp%22%3Atrue%7D; grafana_session=7aa0e1a227c0cc787fc6d5da08a12ec4; grafana_session_expiry=1729880941\"]"
+                  }
+                },
+                { "key": "http.response.body", "value": { "stringValue": "{\"id\":30000}" } },
+                { "key": "http.route", "value": { "stringValue": "/pokemon/import?" } },
+                { "key": "http.client_ip", "value": { "stringValue": "::ffff:192.168.65.1" } },
+                { "key": "http.host", "value": { "stringValue": "localhost:8081" } },
+                {
+                  "key": "http.user_agent",
+                  "value": {
+                    "stringValue": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+                  }
+                },
+                { "key": "http.scheme", "value": { "stringValue": "http" } },
+                { "key": "http.method", "value": { "stringValue": "POST" } },
+                { "key": "http.status_code", "value": { "intValue": 200 } }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" }
+            },
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "8d44399f6cab11a1",
+              "parentSpanId": "c28d6eb1fd9075c2",
+              "traceState": "",
+              "name": "count pokeshop.pokemon",
+              "kind": "SPAN_KIND_CLIENT",
+              "startTimeUnixNano": 1729891137945000000,
+              "endTimeUnixNano": 1729891137946741800,
+              "attributes": [
+                { "key": "db.system", "value": { "stringValue": "postgres" } },
+                { "key": "db.name", "value": { "stringValue": "pokeshop" } },
+                { "key": "db.user", "value": { "stringValue": "ashketchum" } },
+                {
+                  "key": "db.connection_string",
+                  "value": { "stringValue": "postgresql://ashketchum:squirtle123@db:5432/pokeshop?schema=public" }
+                },
+                { "key": "db.sql.table", "value": { "stringValue": "pokemon" } },
+                { "key": "db.operation", "value": { "stringValue": "count" } },
+                { "key": "db.payload", "value": { "stringValue": "{}" } },
+                { "key": "db.result", "value": { "stringValue": "1" } }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" }
+            },
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "73bb089931722d7e",
+              "parentSpanId": "c28d6eb1fd9075c2",
+              "traceState": "",
+              "name": "findMany pokeshop.pokemon",
+              "kind": "SPAN_KIND_CLIENT",
+              "startTimeUnixNano": 1729891137945000000,
+              "endTimeUnixNano": 1729891137946978600,
+              "attributes": [
+                { "key": "db.system", "value": { "stringValue": "postgres" } },
+                { "key": "db.name", "value": { "stringValue": "pokeshop" } },
+                { "key": "db.user", "value": { "stringValue": "ashketchum" } },
+                {
+                  "key": "db.connection_string",
+                  "value": { "stringValue": "postgresql://ashketchum:squirtle123@db:5432/pokeshop?schema=public" }
+                },
+                { "key": "db.sql.table", "value": { "stringValue": "pokemon" } },
+                { "key": "db.operation", "value": { "stringValue": "findMany" } },
+                {
+                  "key": "db.result",
+                  "value": {
+                    "stringValue": "[{\"id\":2,\"imageUrl\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png\",\"isFeatured\":false,\"type\":\"fire\",\"name\":\"charmeleon\"}]"
+                  }
+                }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" }
+            },
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "c28d6eb1fd9075c2",
+              "parentSpanId": "6e4897ce9fb57f04",
+              "traceState": "",
+              "name": "GET /pokemon?",
+              "kind": "SPAN_KIND_SERVER",
+              "startTimeUnixNano": 1729891137944000000,
+              "endTimeUnixNano": 1729891137946582300,
+              "attributes": [
+                { "key": "http.request.header.host", "value": { "stringValue": "[\"localhost:8081\"]" } },
+                { "key": "http.request.header.connection", "value": { "stringValue": "[\"keep-alive\"]" } },
+                {
+                  "key": "http.request.header.traceparent",
+                  "value": { "stringValue": "[\"00-bf8640c6c3bb1a358af2ed297cb082ea-6e4897ce9fb57f04-01\"]" }
+                },
+                { "key": "http.request.header.sec_ch_ua_platform", "value": { "stringValue": "[\"\\\"macOS\\\"\"]" } },
+                {
+                  "key": "http.request.header.user_agent",
+                  "value": {
+                    "stringValue": "[\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36\"]"
+                  }
+                },
+                {
+                  "key": "http.request.header.sec_ch_ua",
+                  "value": {
+                    "stringValue": "[\"\\\"Brave\\\";v=\\\"129\\\", \\\"Not=A?Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"129\\\"\"]"
+                  }
+                },
+                { "key": "http.request.header.content_type", "value": { "stringValue": "[\"application/json\"]" } },
+                { "key": "http.request.header.sec_ch_ua_mobile", "value": { "stringValue": "[\"?0\"]" } },
+                { "key": "http.request.header.accept", "value": { "stringValue": "[\"*/*\"]" } },
+                { "key": "http.request.header.sec_gpc", "value": { "stringValue": "[\"1\"]" } },
+                { "key": "http.request.header.accept_language", "value": { "stringValue": "[\"en-US,en\"]" } },
+                { "key": "http.request.header.sec_fetch_site", "value": { "stringValue": "[\"same-origin\"]" } },
+                { "key": "http.request.header.sec_fetch_mode", "value": { "stringValue": "[\"cors\"]" } },
+                { "key": "http.request.header.sec_fetch_dest", "value": { "stringValue": "[\"empty\"]" } },
+                { "key": "http.request.header.referer", "value": { "stringValue": "[\"http://localhost:8081/\"]" } },
+                {
+                  "key": "http.request.header.accept_encoding",
+                  "value": { "stringValue": "[\"gzip, deflate, br, zstd\"]" }
+                },
+                {
+                  "key": "http.request.header.cookie",
+                  "value": {
+                    "stringValue": "[\"argocd.token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3MTJmMzYyMzRiZTk3NTkxZTY5ZjcxYzRmMzJjZWNhNjVkNzk5NmYifQ.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2RleCIsInN1YiI6IkNnZ3hNVEExTVRBek1SSUdaMmwwYUhWaSIsImF1ZCI6ImFyZ28tY2QiLCJleHAiOjE3Mjg2Njc4ODQsImlhdCI6MTcyODU4MTQ4NCwiYXRfaGFzaCI6IkpfVzFQdU9zdHQ2dXJoRWlubC04VWciLCJjX2hhc2giOiJSQlVSaUU1Y2FfRE1MYzVBUlBYTWRRIiwiZW1haWwiOiJvc2Nhci1ycmV5ZXMxQGhvdG1haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImdyb3VwcyI6WyJrdWJlc2hvcDp0cmFjZXRlc3QtZGV2Il0sIm5hbWUiOiJPc2NhciBSZXllcyIsInByZWZlcnJlZF91c2VybmFtZSI6Inhvc2NhciJ9.GJ7H1kGvCV6rtHCYHCKTJ6MjgR7uqnXMlJHgCuxRGMuVnBqBbGYggns0bjlcO0NEWS7ljV9LteGpxPCaSkj9G3JCI41EGiBVqL05wxFlrBAFZm4f4kQbmEsJ492QlNgUL_JLTm6wAa7stRjA8GEVl7rftTiTRUZhcMUyGJUgglgX7a8lIJ8--gINry7QYxfbXcHyuTf2T88QnI2FWYYWYpW75Hhq6gZ7UZAC-0sAnPO2WgPUWtnWnQ2CVsTJ1RRZsxh8F5fG2xe9gEAdRv9fjDkE_NCPsnMUnNEz4gkUNsDeQAx9jYYwKxLJIhuv65fH7a7YFqypwmArWLT6GrIhMA; knownVisitor=true; ory_kratos_continuity=MTcyOTYxNzkzMHxEWDhFQVFMX2dBQUJFQUVRQUFCZl80QUFBUVp6ZEhKcGJtY01Jd0FoYjNKNVgydHlZWFJ2YzE5dmFXUmpYMkYxZEdoZlkyOWtaVjl6WlhOemFXOXVCbk4wY21sdVp3d21BQ1F6TjJZNE9UUmpPQzAwTldRM0xUUXlOR1l0T0dVMU5pMHhNVGhtTTJFMk9EbGlOV1E9fNSdOJ4T7NB22kFxinzPenC617afEyCyjOD9JXdFkGhx; csrf_token_aee2ad8e2a7f0047f7b720027ff2f7953484eb7c2dc896e51d0206002ea7a67f=bOpvYjJUNTVkd1R31e5gh7UU+jdhTPnlJfCYgSTeR6k=; ph_1234567890_posthog=%7B%22distinct_id%22%3A%2218d7da57-0caf-43de-882b-3fcb860667ac%22%2C%22%24sesid%22%3A%5B1729623688578%2C%220192b59b-0582-7312-b638-8f20b4a1c98a%22%2C1729623688578%5D%2C%22%24epp%22%3Atrue%7D; grafana_session=7aa0e1a227c0cc787fc6d5da08a12ec4; grafana_session_expiry=1729880941\"]"
+                  }
+                },
+                {
+                  "key": "http.response.body",
+                  "value": {
+                    "stringValue": "{\"totalCount\":1,\"items\":[{\"id\":2,\"imageUrl\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png\",\"isFeatured\":false,\"type\":\"fire\",\"name\":\"charmeleon\"}]}"
+                  }
+                },
+                { "key": "http.route", "value": { "stringValue": "/pokemon?" } },
+                { "key": "http.client_ip", "value": { "stringValue": "::ffff:192.168.65.1" } },
+                { "key": "http.host", "value": { "stringValue": "localhost:8081" } },
+                {
+                  "key": "http.user_agent",
+                  "value": {
+                    "stringValue": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+                  }
+                },
+                { "key": "http.scheme", "value": { "stringValue": "http" } },
+                { "key": "http.method", "value": { "stringValue": "GET" } },
+                { "key": "http.status_code", "value": { "intValue": 200 } }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" }
+            },
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "877a4dfe9b856b2d",
+              "parentSpanId": "f20de8278a70da29",
+              "traceState": "",
+              "name": "get featured-list",
+              "kind": "SPAN_KIND_CLIENT",
+              "startTimeUnixNano": 1729891137946000000,
+              "endTimeUnixNano": 1729891137946810400,
+              "attributes": [
+                { "key": "db.system", "value": { "stringValue": "redis" } },
+                { "key": "db.connection_string", "value": { "stringValue": "cache" } },
+                { "key": "db.redis.database_index", "value": { "intValue": 0 } },
+                { "key": "db.operation", "value": { "stringValue": "get" } },
+                { "key": "cache.hit", "value": { "boolValue": true } },
+                { "key": "db.statement", "value": { "stringValue": "get featured-list" } },
+                { "key": "db.payload", "value": { "stringValue": "{\"key\":\"featured-list\"}" } },
+                { "key": "db.result", "value": { "stringValue": "[]" } }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" }
+            },
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "f20de8278a70da29",
+              "parentSpanId": "b22e83f0b9fb922f",
+              "traceState": "",
+              "name": "GET /pokemon/featured?",
+              "kind": "SPAN_KIND_SERVER",
+              "startTimeUnixNano": 1729891137946000000,
+              "endTimeUnixNano": 1729891137947095300,
+              "attributes": [
+                { "key": "http.request.header.host", "value": { "stringValue": "[\"localhost:8081\"]" } },
+                { "key": "http.request.header.connection", "value": { "stringValue": "[\"keep-alive\"]" } },
+                {
+                  "key": "http.request.header.traceparent",
+                  "value": { "stringValue": "[\"00-bf8640c6c3bb1a358af2ed297cb082ea-b22e83f0b9fb922f-01\"]" }
+                },
+                { "key": "http.request.header.sec_ch_ua_platform", "value": { "stringValue": "[\"\\\"macOS\\\"\"]" } },
+                {
+                  "key": "http.request.header.user_agent",
+                  "value": {
+                    "stringValue": "[\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36\"]"
+                  }
+                },
+                {
+                  "key": "http.request.header.sec_ch_ua",
+                  "value": {
+                    "stringValue": "[\"\\\"Brave\\\";v=\\\"129\\\", \\\"Not=A?Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"129\\\"\"]"
+                  }
+                },
+                { "key": "http.request.header.content_type", "value": { "stringValue": "[\"application/json\"]" } },
+                { "key": "http.request.header.sec_ch_ua_mobile", "value": { "stringValue": "[\"?0\"]" } },
+                { "key": "http.request.header.accept", "value": { "stringValue": "[\"*/*\"]" } },
+                { "key": "http.request.header.sec_gpc", "value": { "stringValue": "[\"1\"]" } },
+                { "key": "http.request.header.accept_language", "value": { "stringValue": "[\"en-US,en\"]" } },
+                { "key": "http.request.header.sec_fetch_site", "value": { "stringValue": "[\"same-origin\"]" } },
+                { "key": "http.request.header.sec_fetch_mode", "value": { "stringValue": "[\"cors\"]" } },
+                { "key": "http.request.header.sec_fetch_dest", "value": { "stringValue": "[\"empty\"]" } },
+                { "key": "http.request.header.referer", "value": { "stringValue": "[\"http://localhost:8081/\"]" } },
+                {
+                  "key": "http.request.header.accept_encoding",
+                  "value": { "stringValue": "[\"gzip, deflate, br, zstd\"]" }
+                },
+                {
+                  "key": "http.request.header.cookie",
+                  "value": {
+                    "stringValue": "[\"argocd.token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3MTJmMzYyMzRiZTk3NTkxZTY5ZjcxYzRmMzJjZWNhNjVkNzk5NmYifQ.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2RleCIsInN1YiI6IkNnZ3hNVEExTVRBek1SSUdaMmwwYUhWaSIsImF1ZCI6ImFyZ28tY2QiLCJleHAiOjE3Mjg2Njc4ODQsImlhdCI6MTcyODU4MTQ4NCwiYXRfaGFzaCI6IkpfVzFQdU9zdHQ2dXJoRWlubC04VWciLCJjX2hhc2giOiJSQlVSaUU1Y2FfRE1MYzVBUlBYTWRRIiwiZW1haWwiOiJvc2Nhci1ycmV5ZXMxQGhvdG1haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImdyb3VwcyI6WyJrdWJlc2hvcDp0cmFjZXRlc3QtZGV2Il0sIm5hbWUiOiJPc2NhciBSZXllcyIsInByZWZlcnJlZF91c2VybmFtZSI6Inhvc2NhciJ9.GJ7H1kGvCV6rtHCYHCKTJ6MjgR7uqnXMlJHgCuxRGMuVnBqBbGYggns0bjlcO0NEWS7ljV9LteGpxPCaSkj9G3JCI41EGiBVqL05wxFlrBAFZm4f4kQbmEsJ492QlNgUL_JLTm6wAa7stRjA8GEVl7rftTiTRUZhcMUyGJUgglgX7a8lIJ8--gINry7QYxfbXcHyuTf2T88QnI2FWYYWYpW75Hhq6gZ7UZAC-0sAnPO2WgPUWtnWnQ2CVsTJ1RRZsxh8F5fG2xe9gEAdRv9fjDkE_NCPsnMUnNEz4gkUNsDeQAx9jYYwKxLJIhuv65fH7a7YFqypwmArWLT6GrIhMA; knownVisitor=true; ory_kratos_continuity=MTcyOTYxNzkzMHxEWDhFQVFMX2dBQUJFQUVRQUFCZl80QUFBUVp6ZEhKcGJtY01Jd0FoYjNKNVgydHlZWFJ2YzE5dmFXUmpYMkYxZEdoZlkyOWtaVjl6WlhOemFXOXVCbk4wY21sdVp3d21BQ1F6TjJZNE9UUmpPQzAwTldRM0xUUXlOR1l0T0dVMU5pMHhNVGhtTTJFMk9EbGlOV1E9fNSdOJ4T7NB22kFxinzPenC617afEyCyjOD9JXdFkGhx; csrf_token_aee2ad8e2a7f0047f7b720027ff2f7953484eb7c2dc896e51d0206002ea7a67f=bOpvYjJUNTVkd1R31e5gh7UU+jdhTPnlJfCYgSTeR6k=; ph_1234567890_posthog=%7B%22distinct_id%22%3A%2218d7da57-0caf-43de-882b-3fcb860667ac%22%2C%22%24sesid%22%3A%5B1729623688578%2C%220192b59b-0582-7312-b638-8f20b4a1c98a%22%2C1729623688578%5D%2C%22%24epp%22%3Atrue%7D; grafana_session=7aa0e1a227c0cc787fc6d5da08a12ec4; grafana_session_expiry=1729880941\"]"
+                  }
+                },
+                { "key": "http.response.body", "value": { "stringValue": "[]" } },
+                { "key": "http.route", "value": { "stringValue": "/pokemon/featured?" } },
+                { "key": "http.client_ip", "value": { "stringValue": "::ffff:192.168.65.1" } },
+                { "key": "http.host", "value": { "stringValue": "localhost:8081" } },
+                {
+                  "key": "http.user_agent",
+                  "value": {
+                    "stringValue": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+                  }
+                },
+                { "key": "http.scheme", "value": { "stringValue": "http" } },
+                { "key": "http.method", "value": { "stringValue": "GET" } },
+                { "key": "http.status_code", "value": { "intValue": 200 } }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" }
+            }
+          ],
+          "instrumentationLibrary": { "name": "pokeshop", "version": "" }
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          { "key": "telemetry.sdk.language", "value": { "stringValue": "nodejs" } },
+          { "key": "telemetry.sdk.name", "value": { "stringValue": "opentelemetry" } },
+          { "key": "telemetry.sdk.version", "value": { "stringValue": "1.26.0" } },
+          { "key": "process.pid", "value": { "intValue": 17 } },
+          { "key": "process.executable.name", "value": { "stringValue": "node" } },
+          { "key": "process.executable.path", "value": { "stringValue": "/usr/local/bin/node" } },
+          {
+            "key": "process.command_args",
+            "value": {
+              "stringValue": "[\"/usr/local/bin/node\",\"--require\",\"./telemetry/setup.js\",\"/app/worker.js\"]"
+            }
+          },
+          { "key": "process.runtime.version", "value": { "stringValue": "20.17.0" } },
+          { "key": "process.runtime.name", "value": { "stringValue": "nodejs" } },
+          { "key": "process.runtime.description", "value": { "stringValue": "Node.js" } },
+          { "key": "process.command", "value": { "stringValue": "/app/worker.js" } },
+          { "key": "process.owner", "value": { "stringValue": "root" } },
+          { "key": "host.name", "value": { "stringValue": "3b9be3d68df8" } },
+          { "key": "host.arch", "value": { "stringValue": "arm64" } },
+          { "key": "service.name", "value": { "stringValue": "pokeshop-worker" } }
+        ],
+        "droppedAttributesCount": 0
+      },
+      "instrumentationLibrarySpans": [
+        {
+          "spans": [
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "19ffabf3f4e72460",
+              "parentSpanId": "3d6ee4c2dd399f12",
+              "traceState": "",
+              "name": "get pokemon_30000",
+              "kind": "SPAN_KIND_CLIENT",
+              "startTimeUnixNano": 1729891137947000000,
+              "endTimeUnixNano": 1729891137950994400,
+              "attributes": [
+                { "key": "db.system", "value": { "stringValue": "redis" } },
+                { "key": "db.connection_string", "value": { "stringValue": "cache" } },
+                { "key": "db.redis.database_index", "value": { "intValue": 0 } },
+                { "key": "db.operation", "value": { "stringValue": "get" } },
+                { "key": "cache.hit", "value": { "boolValue": false } },
+                { "key": "db.statement", "value": { "stringValue": "get pokemon_30000" } },
+                { "key": "db.payload", "value": { "stringValue": "{\"key\":\"pokemon_30000\"}" } },
+                { "key": "db.result", "value": { "stringValue": "null" } }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" }
+            },
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "1d79c7e0323bf1b7",
+              "parentSpanId": "3d6ee4c2dd399f12",
+              "traceState": "",
+              "name": "GET",
+              "kind": "SPAN_KIND_CLIENT",
+              "startTimeUnixNano": 1729891137951000000,
+              "endTimeUnixNano": 1729891139386085400,
+              "attributes": [
+                { "key": "http.route", "value": { "stringValue": "/api/v2/pokemon/30000" } },
+                { "key": "http.scheme", "value": { "stringValue": "https:" } },
+                { "key": "net.peer.name", "value": { "stringValue": "pokeapi.co" } },
+                { "key": "http.method", "value": { "stringValue": "GET" } },
+                { "key": "http.url", "value": { "stringValue": "https://pokeapi.co/api/v2/pokemon/30000" } }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 2, "message": "" },
+              "events": [
+                {
+                  "timeUnixNano": 1729891139386039000,
+                  "attributes": [
+                    { "key": "message", "value": { "stringValue": "exception" } },
+                    { "key": "exception.type", "value": { "stringValue": "FetchError" } },
+                    {
+                      "key": "exception.message",
+                      "value": {
+                        "stringValue": "invalid json response body at https://pokeapi.co/api/v2/pokemon/30000 reason: Unexpected token 'N', \"Not Found\" is not valid JSON"
+                      }
+                    },
+                    {
+                      "key": "exception.stacktrace",
+                      "value": {
+                        "stringValue": "FetchError: invalid json response body at https://pokeapi.co/api/v2/pokemon/30000 reason: Unexpected token 'N', \"Not Found\" is not valid JSON\n    at /app/node_modules/node-fetch/lib/index.js:273:32\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      }
+                    }
+                  ],
+                  "droppedAttributesCount": 0,
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "3d6ee4c2dd399f12",
+              "parentSpanId": "35653bc36974d767",
+              "traceState": "",
+              "name": "import pokemon",
+              "kind": "SPAN_KIND_INTERNAL",
+              "startTimeUnixNano": 1729891137947000000,
+              "endTimeUnixNano": 1729891139387182300,
+              "attributes": [],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 2, "message": "" },
+              "events": [
+                {
+                  "timeUnixNano": 1729891139386665500,
+                  "attributes": [
+                    { "key": "message", "value": { "stringValue": "exception" } },
+                    { "key": "exception.type", "value": { "stringValue": "FetchError" } },
+                    {
+                      "key": "exception.message",
+                      "value": {
+                        "stringValue": "invalid json response body at https://pokeapi.co/api/v2/pokemon/30000 reason: Unexpected token 'N', \"Not Found\" is not valid JSON"
+                      }
+                    },
+                    {
+                      "key": "exception.stacktrace",
+                      "value": {
+                        "stringValue": "FetchError: invalid json response body at https://pokeapi.co/api/v2/pokemon/30000 reason: Unexpected token 'N', \"Not Found\" is not valid JSON\n    at /app/node_modules/node-fetch/lib/index.js:273:32\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      }
+                    }
+                  ],
+                  "droppedAttributesCount": 0,
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "traceId": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanId": "35653bc36974d767",
+              "parentSpanId": "443544d1de42bbe0",
+              "traceState": "",
+              "name": "queue.synchronizePokemon process",
+              "kind": "SPAN_KIND_CONSUMER",
+              "startTimeUnixNano": 1729891137945000000,
+              "endTimeUnixNano": 1729891139386579200,
+              "attributes": [
+                { "key": "messaging.system", "value": { "stringValue": "rabbitmq" } },
+                { "key": "messaging.url", "value": { "stringValue": "queue" } },
+                { "key": "net.peer.name", "value": { "stringValue": "queue" } },
+                { "key": "messaging.destination", "value": { "stringValue": "queue.synchronizePokemon" } },
+                { "key": "messaging.operation", "value": { "stringValue": "process" } },
+                {
+                  "key": "messaging.payload",
+                  "value": {
+                    "stringValue": "{\"fields\":{\"consumerTag\":\"amq.ctag-cpx9d4rkRRrmevXeYBwhmQ\",\"deliveryTag\":3,\"redelivered\":false,\"exchange\":\"\",\"routingKey\":\"queue.synchronizePokemon\"},\"properties\":{\"headers\":{\"traceparent\":\"00-bf8640c6c3bb1a358af2ed297cb082ea-443544d1de42bbe0-01\"}},\"content\":{\"type\":\"Buffer\",\"data\":[123,34,105,100,34,58,51,48,48,48,48,44,34,105,103,110,111,114,101,67,97,99,104,101,34,58,102,97,108,115,101,125]}}"
+                  }
+                }
+              ],
+              "droppedAttributesCount": 0,
+              "droppedEventsCount": 0,
+              "droppedLinksCount": 0,
+              "status": { "code": 0, "message": "" }
+            }
+          ],
+          "instrumentationLibrary": { "name": "pokeshop-worker", "version": "" }
+        }
+      ]
+    }
+  ]
+}

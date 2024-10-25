@@ -1,0 +1,26 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "publish": "lerna publish",
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-module-resolver": "^1.5.0",
+    "jest": "^29.7.0",
+    "lerna": "^8.0.0"
+  },
+  "dependencies": {
+    "ts-jest": "^29.1.2"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint"],
+  "root": true,
+  "globals": {},
+  "rules": {
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 150,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "@typescript-eslint/ban-types": [
+      "warn",
+      {
+        "types": {
+          "Function": null
+        }
+      }
+    ],
+    "@typescript-eslint/no-this-alias": "off"
+  },
+  "parser": "@typescript-eslint/parser",
+  "env": {},
+  "overrides": []
+}
