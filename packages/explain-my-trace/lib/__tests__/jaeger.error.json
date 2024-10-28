@@ -1,0 +1,1307 @@
+{
+  "data": [
+    {
+      "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+      "spans": [
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "73bb089931722d7e",
+          "operationName": "findMany pokeshop.pokemon",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "c28d6eb1fd9075c2"
+            }
+          ],
+          "startTime": 1729891137945000,
+          "duration": 1978,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "postgres"
+            },
+            {
+              "key": "db.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "db.user",
+              "type": "string",
+              "value": "ashketchum"
+            },
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "postgresql://ashketchum:squirtle123@db:5432/pokeshop?schema=public"
+            },
+            {
+              "key": "db.sql.table",
+              "type": "string",
+              "value": "pokemon"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "findMany"
+            },
+            {
+              "key": "db.result",
+              "type": "string",
+              "value": "[{\"id\":2,\"imageUrl\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png\",\"isFeatured\":false,\"type\":\"fire\",\"name\":\"charmeleon\"}]"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": ["clock skew adjustment disabled; not applying calculated delta of -698.146µs"]
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "46bc3e326a1df631",
+          "operationName": "validate request",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "6bbbd6b9344ce406"
+            }
+          ],
+          "startTime": 1729891137940000,
+          "duration": 730,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "validation.is_valid",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1729891137940028,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "validation started"
+                }
+              ]
+            },
+            {
+              "timestamp": 1729891137940679,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "request is valid"
+                },
+                {
+                  "key": "validation.is_valid",
+                  "type": "bool",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "443544d1de42bbe0",
+          "operationName": "queue.synchronizePokemon publish",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "46bc3e326a1df631"
+            }
+          ],
+          "startTime": 1729891137941000,
+          "duration": 223,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "messaging.system",
+              "type": "string",
+              "value": "rabbitmq"
+            },
+            {
+              "key": "messaging.url",
+              "type": "string",
+              "value": "queue"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "queue"
+            },
+            {
+              "key": "messaging.destination",
+              "type": "string",
+              "value": "queue.synchronizePokemon"
+            },
+            {
+              "key": "messaging.operation",
+              "type": "string",
+              "value": "publish"
+            },
+            {
+              "key": "messaging.payload",
+              "type": "string",
+              "value": "{\"id\":30000,\"ignoreCache\":false}"
+            },
+            {
+              "key": "messaging.header.traceparent",
+              "type": "string",
+              "value": "[\"00-bf8640c6c3bb1a358af2ed297cb082ea-443544d1de42bbe0-01\"]"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "producer"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": ["clock skew adjustment disabled; not applying calculated delta of -746.73µs"]
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "6bbbd6b9344ce406",
+          "operationName": "POST /pokemon/import?",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "8930b7f6379d2e1e"
+            }
+          ],
+          "startTime": 1729891137940000,
+          "duration": 1626,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "http.request.header.host",
+              "type": "string",
+              "value": "[\"localhost:8081\"]"
+            },
+            {
+              "key": "http.request.header.connection",
+              "type": "string",
+              "value": "[\"keep-alive\"]"
+            },
+            {
+              "key": "http.request.header.content_length",
+              "type": "string",
+              "value": "[\"12\"]"
+            },
+            {
+              "key": "http.request.header.traceparent",
+              "type": "string",
+              "value": "[\"00-bf8640c6c3bb1a358af2ed297cb082ea-8930b7f6379d2e1e-01\"]"
+            },
+            {
+              "key": "http.request.header.sec_ch_ua_platform",
+              "type": "string",
+              "value": "[\"\\\"macOS\\\"\"]"
+            },
+            {
+              "key": "http.request.header.user_agent",
+              "type": "string",
+              "value": "[\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36\"]"
+            },
+            {
+              "key": "http.request.header.sec_ch_ua",
+              "type": "string",
+              "value": "[\"\\\"Brave\\\";v=\\\"129\\\", \\\"Not=A?Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"129\\\"\"]"
+            },
+            {
+              "key": "http.request.header.content_type",
+              "type": "string",
+              "value": "[\"application/json\"]"
+            },
+            {
+              "key": "http.request.header.sec_ch_ua_mobile",
+              "type": "string",
+              "value": "[\"?0\"]"
+            },
+            {
+              "key": "http.request.header.accept",
+              "type": "string",
+              "value": "[\"*/*\"]"
+            },
+            {
+              "key": "http.request.header.sec_gpc",
+              "type": "string",
+              "value": "[\"1\"]"
+            },
+            {
+              "key": "http.request.header.accept_language",
+              "type": "string",
+              "value": "[\"en-US,en\"]"
+            },
+            {
+              "key": "http.request.header.origin",
+              "type": "string",
+              "value": "[\"http://localhost:8081\"]"
+            },
+            {
+              "key": "http.request.header.sec_fetch_site",
+              "type": "string",
+              "value": "[\"same-origin\"]"
+            },
+            {
+              "key": "http.request.header.sec_fetch_mode",
+              "type": "string",
+              "value": "[\"cors\"]"
+            },
+            {
+              "key": "http.request.header.sec_fetch_dest",
+              "type": "string",
+              "value": "[\"empty\"]"
+            },
+            {
+              "key": "http.request.header.referer",
+              "type": "string",
+              "value": "[\"http://localhost:8081/\"]"
+            },
+            {
+              "key": "http.request.header.accept_encoding",
+              "type": "string",
+              "value": "[\"gzip, deflate, br, zstd\"]"
+            },
+            {
+              "key": "http.request.header.cookie",
+              "type": "string",
+              "value": "[\"argocd.token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3MTJmMzYyMzRiZTk3NTkxZTY5ZjcxYzRmMzJjZWNhNjVkNzk5NmYifQ.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2RleCIsInN1YiI6IkNnZ3hNVEExTVRBek1SSUdaMmwwYUhWaSIsImF1ZCI6ImFyZ28tY2QiLCJleHAiOjE3Mjg2Njc4ODQsImlhdCI6MTcyODU4MTQ4NCwiYXRfaGFzaCI6IkpfVzFQdU9zdHQ2dXJoRWlubC04VWciLCJjX2hhc2giOiJSQlVSaUU1Y2FfRE1MYzVBUlBYTWRRIiwiZW1haWwiOiJvc2Nhci1ycmV5ZXMxQGhvdG1haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImdyb3VwcyI6WyJrdWJlc2hvcDp0cmFjZXRlc3QtZGV2Il0sIm5hbWUiOiJPc2NhciBSZXllcyIsInByZWZlcnJlZF91c2VybmFtZSI6Inhvc2NhciJ9.GJ7H1kGvCV6rtHCYHCKTJ6MjgR7uqnXMlJHgCuxRGMuVnBqBbGYggns0bjlcO0NEWS7ljV9LteGpxPCaSkj9G3JCI41EGiBVqL05wxFlrBAFZm4f4kQbmEsJ492QlNgUL_JLTm6wAa7stRjA8GEVl7rftTiTRUZhcMUyGJUgglgX7a8lIJ8--gINry7QYxfbXcHyuTf2T88QnI2FWYYWYpW75Hhq6gZ7UZAC-0sAnPO2WgPUWtnWnQ2CVsTJ1RRZsxh8F5fG2xe9gEAdRv9fjDkE_NCPsnMUnNEz4gkUNsDeQAx9jYYwKxLJIhuv65fH7a7YFqypwmArWLT6GrIhMA; knownVisitor=true; ory_kratos_continuity=MTcyOTYxNzkzMHxEWDhFQVFMX2dBQUJFQUVRQUFCZl80QUFBUVp6ZEhKcGJtY01Jd0FoYjNKNVgydHlZWFJ2YzE5dmFXUmpYMkYxZEdoZlkyOWtaVjl6WlhOemFXOXVCbk4wY21sdVp3d21BQ1F6TjJZNE9UUmpPQzAwTldRM0xUUXlOR1l0T0dVMU5pMHhNVGhtTTJFMk9EbGlOV1E9fNSdOJ4T7NB22kFxinzPenC617afEyCyjOD9JXdFkGhx; csrf_token_aee2ad8e2a7f0047f7b720027ff2f7953484eb7c2dc896e51d0206002ea7a67f=bOpvYjJUNTVkd1R31e5gh7UU+jdhTPnlJfCYgSTeR6k=; ph_1234567890_posthog=%7B%22distinct_id%22%3A%2218d7da57-0caf-43de-882b-3fcb860667ac%22%2C%22%24sesid%22%3A%5B1729623688578%2C%220192b59b-0582-7312-b638-8f20b4a1c98a%22%2C1729623688578%5D%2C%22%24epp%22%3Atrue%7D; grafana_session=7aa0e1a227c0cc787fc6d5da08a12ec4; grafana_session_expiry=1729880941\"]"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.response.body",
+              "type": "string",
+              "value": "{\"id\":30000}"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/pokemon/import?"
+            },
+            {
+              "key": "http.client_ip",
+              "type": "string",
+              "value": "::ffff:192.168.65.1"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "localhost:8081"
+            },
+            {
+              "key": "http.user_agent",
+              "type": "string",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": ["invalid parent span IDs=8930b7f6379d2e1e; skipping clock skew adjustment"]
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "8d44399f6cab11a1",
+          "operationName": "count pokeshop.pokemon",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "c28d6eb1fd9075c2"
+            }
+          ],
+          "startTime": 1729891137945000,
+          "duration": 1741,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "postgres"
+            },
+            {
+              "key": "db.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "db.user",
+              "type": "string",
+              "value": "ashketchum"
+            },
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "postgresql://ashketchum:squirtle123@db:5432/pokeshop?schema=public"
+            },
+            {
+              "key": "db.sql.table",
+              "type": "string",
+              "value": "pokemon"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "count"
+            },
+            {
+              "key": "db.payload",
+              "type": "string",
+              "value": "{}"
+            },
+            {
+              "key": "db.result",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": ["clock skew adjustment disabled; not applying calculated delta of -579.729µs"]
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "c28d6eb1fd9075c2",
+          "operationName": "GET /pokemon?",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "6e4897ce9fb57f04"
+            }
+          ],
+          "startTime": 1729891137944000,
+          "duration": 2582,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "http.request.header.host",
+              "type": "string",
+              "value": "[\"localhost:8081\"]"
+            },
+            {
+              "key": "http.request.header.connection",
+              "type": "string",
+              "value": "[\"keep-alive\"]"
+            },
+            {
+              "key": "http.request.header.traceparent",
+              "type": "string",
+              "value": "[\"00-bf8640c6c3bb1a358af2ed297cb082ea-6e4897ce9fb57f04-01\"]"
+            },
+            {
+              "key": "http.request.header.sec_ch_ua_platform",
+              "type": "string",
+              "value": "[\"\\\"macOS\\\"\"]"
+            },
+            {
+              "key": "http.request.header.user_agent",
+              "type": "string",
+              "value": "[\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36\"]"
+            },
+            {
+              "key": "http.request.header.sec_ch_ua",
+              "type": "string",
+              "value": "[\"\\\"Brave\\\";v=\\\"129\\\", \\\"Not=A?Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"129\\\"\"]"
+            },
+            {
+              "key": "http.request.header.content_type",
+              "type": "string",
+              "value": "[\"application/json\"]"
+            },
+            {
+              "key": "http.request.header.sec_ch_ua_mobile",
+              "type": "string",
+              "value": "[\"?0\"]"
+            },
+            {
+              "key": "http.request.header.accept",
+              "type": "string",
+              "value": "[\"*/*\"]"
+            },
+            {
+              "key": "http.request.header.sec_gpc",
+              "type": "string",
+              "value": "[\"1\"]"
+            },
+            {
+              "key": "http.request.header.accept_language",
+              "type": "string",
+              "value": "[\"en-US,en\"]"
+            },
+            {
+              "key": "http.request.header.sec_fetch_site",
+              "type": "string",
+              "value": "[\"same-origin\"]"
+            },
+            {
+              "key": "http.request.header.sec_fetch_mode",
+              "type": "string",
+              "value": "[\"cors\"]"
+            },
+            {
+              "key": "http.request.header.sec_fetch_dest",
+              "type": "string",
+              "value": "[\"empty\"]"
+            },
+            {
+              "key": "http.request.header.referer",
+              "type": "string",
+              "value": "[\"http://localhost:8081/\"]"
+            },
+            {
+              "key": "http.request.header.accept_encoding",
+              "type": "string",
+              "value": "[\"gzip, deflate, br, zstd\"]"
+            },
+            {
+              "key": "http.request.header.cookie",
+              "type": "string",
+              "value": "[\"argocd.token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3MTJmMzYyMzRiZTk3NTkxZTY5ZjcxYzRmMzJjZWNhNjVkNzk5NmYifQ.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2RleCIsInN1YiI6IkNnZ3hNVEExTVRBek1SSUdaMmwwYUhWaSIsImF1ZCI6ImFyZ28tY2QiLCJleHAiOjE3Mjg2Njc4ODQsImlhdCI6MTcyODU4MTQ4NCwiYXRfaGFzaCI6IkpfVzFQdU9zdHQ2dXJoRWlubC04VWciLCJjX2hhc2giOiJSQlVSaUU1Y2FfRE1MYzVBUlBYTWRRIiwiZW1haWwiOiJvc2Nhci1ycmV5ZXMxQGhvdG1haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImdyb3VwcyI6WyJrdWJlc2hvcDp0cmFjZXRlc3QtZGV2Il0sIm5hbWUiOiJPc2NhciBSZXllcyIsInByZWZlcnJlZF91c2VybmFtZSI6Inhvc2NhciJ9.GJ7H1kGvCV6rtHCYHCKTJ6MjgR7uqnXMlJHgCuxRGMuVnBqBbGYggns0bjlcO0NEWS7ljV9LteGpxPCaSkj9G3JCI41EGiBVqL05wxFlrBAFZm4f4kQbmEsJ492QlNgUL_JLTm6wAa7stRjA8GEVl7rftTiTRUZhcMUyGJUgglgX7a8lIJ8--gINry7QYxfbXcHyuTf2T88QnI2FWYYWYpW75Hhq6gZ7UZAC-0sAnPO2WgPUWtnWnQ2CVsTJ1RRZsxh8F5fG2xe9gEAdRv9fjDkE_NCPsnMUnNEz4gkUNsDeQAx9jYYwKxLJIhuv65fH7a7YFqypwmArWLT6GrIhMA; knownVisitor=true; ory_kratos_continuity=MTcyOTYxNzkzMHxEWDhFQVFMX2dBQUJFQUVRQUFCZl80QUFBUVp6ZEhKcGJtY01Jd0FoYjNKNVgydHlZWFJ2YzE5dmFXUmpYMkYxZEdoZlkyOWtaVjl6WlhOemFXOXVCbk4wY21sdVp3d21BQ1F6TjJZNE9UUmpPQzAwTldRM0xUUXlOR1l0T0dVMU5pMHhNVGhtTTJFMk9EbGlOV1E9fNSdOJ4T7NB22kFxinzPenC617afEyCyjOD9JXdFkGhx; csrf_token_aee2ad8e2a7f0047f7b720027ff2f7953484eb7c2dc896e51d0206002ea7a67f=bOpvYjJUNTVkd1R31e5gh7UU+jdhTPnlJfCYgSTeR6k=; ph_1234567890_posthog=%7B%22distinct_id%22%3A%2218d7da57-0caf-43de-882b-3fcb860667ac%22%2C%22%24sesid%22%3A%5B1729623688578%2C%220192b59b-0582-7312-b638-8f20b4a1c98a%22%2C1729623688578%5D%2C%22%24epp%22%3Atrue%7D; grafana_session=7aa0e1a227c0cc787fc6d5da08a12ec4; grafana_session_expiry=1729880941\"]"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.response.body",
+              "type": "string",
+              "value": "{\"totalCount\":1,\"items\":[{\"id\":2,\"imageUrl\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png\",\"isFeatured\":false,\"type\":\"fire\",\"name\":\"charmeleon\"}]}"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/pokemon?"
+            },
+            {
+              "key": "http.client_ip",
+              "type": "string",
+              "value": "::ffff:192.168.65.1"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "localhost:8081"
+            },
+            {
+              "key": "http.user_agent",
+              "type": "string",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": ["invalid parent span IDs=6e4897ce9fb57f04; skipping clock skew adjustment"]
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "877a4dfe9b856b2d",
+          "operationName": "get featured-list",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "f20de8278a70da29"
+            }
+          ],
+          "startTime": 1729891137946000,
+          "duration": 810,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "redis"
+            },
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "cache"
+            },
+            {
+              "key": "db.redis.database_index",
+              "type": "int64",
+              "value": 0
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "get"
+            },
+            {
+              "key": "cache.hit",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "db.statement",
+              "type": "string",
+              "value": "get featured-list"
+            },
+            {
+              "key": "db.payload",
+              "type": "string",
+              "value": "{\"key\":\"featured-list\"}"
+            },
+            {
+              "key": "db.result",
+              "type": "string",
+              "value": "[]"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "f20de8278a70da29",
+          "operationName": "GET /pokemon/featured?",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "b22e83f0b9fb922f"
+            }
+          ],
+          "startTime": 1729891137946000,
+          "duration": 1095,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop"
+            },
+            {
+              "key": "http.request.header.host",
+              "type": "string",
+              "value": "[\"localhost:8081\"]"
+            },
+            {
+              "key": "http.request.header.connection",
+              "type": "string",
+              "value": "[\"keep-alive\"]"
+            },
+            {
+              "key": "http.request.header.traceparent",
+              "type": "string",
+              "value": "[\"00-bf8640c6c3bb1a358af2ed297cb082ea-b22e83f0b9fb922f-01\"]"
+            },
+            {
+              "key": "http.request.header.sec_ch_ua_platform",
+              "type": "string",
+              "value": "[\"\\\"macOS\\\"\"]"
+            },
+            {
+              "key": "http.request.header.user_agent",
+              "type": "string",
+              "value": "[\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36\"]"
+            },
+            {
+              "key": "http.request.header.sec_ch_ua",
+              "type": "string",
+              "value": "[\"\\\"Brave\\\";v=\\\"129\\\", \\\"Not=A?Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"129\\\"\"]"
+            },
+            {
+              "key": "http.request.header.content_type",
+              "type": "string",
+              "value": "[\"application/json\"]"
+            },
+            {
+              "key": "http.request.header.sec_ch_ua_mobile",
+              "type": "string",
+              "value": "[\"?0\"]"
+            },
+            {
+              "key": "http.request.header.accept",
+              "type": "string",
+              "value": "[\"*/*\"]"
+            },
+            {
+              "key": "http.request.header.sec_gpc",
+              "type": "string",
+              "value": "[\"1\"]"
+            },
+            {
+              "key": "http.request.header.accept_language",
+              "type": "string",
+              "value": "[\"en-US,en\"]"
+            },
+            {
+              "key": "http.request.header.sec_fetch_site",
+              "type": "string",
+              "value": "[\"same-origin\"]"
+            },
+            {
+              "key": "http.request.header.sec_fetch_mode",
+              "type": "string",
+              "value": "[\"cors\"]"
+            },
+            {
+              "key": "http.request.header.sec_fetch_dest",
+              "type": "string",
+              "value": "[\"empty\"]"
+            },
+            {
+              "key": "http.request.header.referer",
+              "type": "string",
+              "value": "[\"http://localhost:8081/\"]"
+            },
+            {
+              "key": "http.request.header.accept_encoding",
+              "type": "string",
+              "value": "[\"gzip, deflate, br, zstd\"]"
+            },
+            {
+              "key": "http.request.header.cookie",
+              "type": "string",
+              "value": "[\"argocd.token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3MTJmMzYyMzRiZTk3NTkxZTY5ZjcxYzRmMzJjZWNhNjVkNzk5NmYifQ.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2RleCIsInN1YiI6IkNnZ3hNVEExTVRBek1SSUdaMmwwYUhWaSIsImF1ZCI6ImFyZ28tY2QiLCJleHAiOjE3Mjg2Njc4ODQsImlhdCI6MTcyODU4MTQ4NCwiYXRfaGFzaCI6IkpfVzFQdU9zdHQ2dXJoRWlubC04VWciLCJjX2hhc2giOiJSQlVSaUU1Y2FfRE1MYzVBUlBYTWRRIiwiZW1haWwiOiJvc2Nhci1ycmV5ZXMxQGhvdG1haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImdyb3VwcyI6WyJrdWJlc2hvcDp0cmFjZXRlc3QtZGV2Il0sIm5hbWUiOiJPc2NhciBSZXllcyIsInByZWZlcnJlZF91c2VybmFtZSI6Inhvc2NhciJ9.GJ7H1kGvCV6rtHCYHCKTJ6MjgR7uqnXMlJHgCuxRGMuVnBqBbGYggns0bjlcO0NEWS7ljV9LteGpxPCaSkj9G3JCI41EGiBVqL05wxFlrBAFZm4f4kQbmEsJ492QlNgUL_JLTm6wAa7stRjA8GEVl7rftTiTRUZhcMUyGJUgglgX7a8lIJ8--gINry7QYxfbXcHyuTf2T88QnI2FWYYWYpW75Hhq6gZ7UZAC-0sAnPO2WgPUWtnWnQ2CVsTJ1RRZsxh8F5fG2xe9gEAdRv9fjDkE_NCPsnMUnNEz4gkUNsDeQAx9jYYwKxLJIhuv65fH7a7YFqypwmArWLT6GrIhMA; knownVisitor=true; ory_kratos_continuity=MTcyOTYxNzkzMHxEWDhFQVFMX2dBQUJFQUVRQUFCZl80QUFBUVp6ZEhKcGJtY01Jd0FoYjNKNVgydHlZWFJ2YzE5dmFXUmpYMkYxZEdoZlkyOWtaVjl6WlhOemFXOXVCbk4wY21sdVp3d21BQ1F6TjJZNE9UUmpPQzAwTldRM0xUUXlOR1l0T0dVMU5pMHhNVGhtTTJFMk9EbGlOV1E9fNSdOJ4T7NB22kFxinzPenC617afEyCyjOD9JXdFkGhx; csrf_token_aee2ad8e2a7f0047f7b720027ff2f7953484eb7c2dc896e51d0206002ea7a67f=bOpvYjJUNTVkd1R31e5gh7UU+jdhTPnlJfCYgSTeR6k=; ph_1234567890_posthog=%7B%22distinct_id%22%3A%2218d7da57-0caf-43de-882b-3fcb860667ac%22%2C%22%24sesid%22%3A%5B1729623688578%2C%220192b59b-0582-7312-b638-8f20b4a1c98a%22%2C1729623688578%5D%2C%22%24epp%22%3Atrue%7D; grafana_session=7aa0e1a227c0cc787fc6d5da08a12ec4; grafana_session_expiry=1729880941\"]"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.response.body",
+              "type": "string",
+              "value": "[]"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/pokemon/featured?"
+            },
+            {
+              "key": "http.client_ip",
+              "type": "string",
+              "value": "::ffff:192.168.65.1"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "localhost:8081"
+            },
+            {
+              "key": "http.user_agent",
+              "type": "string",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": ["invalid parent span IDs=b22e83f0b9fb922f; skipping clock skew adjustment"]
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "19ffabf3f4e72460",
+          "operationName": "get pokemon_30000",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "3d6ee4c2dd399f12"
+            }
+          ],
+          "startTime": 1729891137947000,
+          "duration": 3994,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop-worker"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "redis"
+            },
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "cache"
+            },
+            {
+              "key": "db.redis.database_index",
+              "type": "int64",
+              "value": 0
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "get"
+            },
+            {
+              "key": "cache.hit",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "key": "db.statement",
+              "type": "string",
+              "value": "get pokemon_30000"
+            },
+            {
+              "key": "db.payload",
+              "type": "string",
+              "value": "{\"key\":\"pokemon_30000\"}"
+            },
+            {
+              "key": "db.result",
+              "type": "string",
+              "value": "null"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "1d79c7e0323bf1b7",
+          "operationName": "GET",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "3d6ee4c2dd399f12"
+            }
+          ],
+          "startTime": 1729891137951000,
+          "duration": 1435085,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop-worker"
+            },
+            {
+              "key": "http.url",
+              "type": "string",
+              "value": "https://pokeapi.co/api/v2/pokemon/30000"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/v2/pokemon/30000"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "https:"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "pokeapi.co"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            },
+            {
+              "key": "otel.status_code",
+              "type": "string",
+              "value": "ERROR"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1729891139386039,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "exception"
+                },
+                {
+                  "key": "exception.message",
+                  "type": "string",
+                  "value": "invalid json response body at https://pokeapi.co/api/v2/pokemon/30000 reason: Unexpected token 'N', \"Not Found\" is not valid JSON"
+                },
+                {
+                  "key": "exception.stacktrace",
+                  "type": "string",
+                  "value": "FetchError: invalid json response body at https://pokeapi.co/api/v2/pokemon/30000 reason: Unexpected token 'N', \"Not Found\" is not valid JSON\n    at /app/node_modules/node-fetch/lib/index.js:273:32\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                },
+                {
+                  "key": "exception.type",
+                  "type": "string",
+                  "value": "FetchError"
+                }
+              ]
+            }
+          ],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "3d6ee4c2dd399f12",
+          "operationName": "import pokemon",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "35653bc36974d767"
+            }
+          ],
+          "startTime": 1729891137947000,
+          "duration": 1440182,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop-worker"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "otel.status_code",
+              "type": "string",
+              "value": "ERROR"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1729891139386665,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "exception"
+                },
+                {
+                  "key": "exception.message",
+                  "type": "string",
+                  "value": "invalid json response body at https://pokeapi.co/api/v2/pokemon/30000 reason: Unexpected token 'N', \"Not Found\" is not valid JSON"
+                },
+                {
+                  "key": "exception.stacktrace",
+                  "type": "string",
+                  "value": "FetchError: invalid json response body at https://pokeapi.co/api/v2/pokemon/30000 reason: Unexpected token 'N', \"Not Found\" is not valid JSON\n    at /app/node_modules/node-fetch/lib/index.js:273:32\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                },
+                {
+                  "key": "exception.type",
+                  "type": "string",
+                  "value": "FetchError"
+                }
+              ]
+            }
+          ],
+          "processID": "p2",
+          "warnings": ["clock skew adjustment disabled; not applying calculated delta of -1.301708ms"]
+        },
+        {
+          "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+          "spanID": "35653bc36974d767",
+          "operationName": "queue.synchronizePokemon process",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "bf8640c6c3bb1a358af2ed297cb082ea",
+              "spanID": "443544d1de42bbe0"
+            }
+          ],
+          "startTime": 1729891137945000,
+          "duration": 1441579,
+          "tags": [
+            {
+              "key": "otel.library.name",
+              "type": "string",
+              "value": "pokeshop-worker"
+            },
+            {
+              "key": "messaging.system",
+              "type": "string",
+              "value": "rabbitmq"
+            },
+            {
+              "key": "messaging.url",
+              "type": "string",
+              "value": "queue"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "queue"
+            },
+            {
+              "key": "messaging.destination",
+              "type": "string",
+              "value": "queue.synchronizePokemon"
+            },
+            {
+              "key": "messaging.operation",
+              "type": "string",
+              "value": "process"
+            },
+            {
+              "key": "messaging.payload",
+              "type": "string",
+              "value": "{\"fields\":{\"consumerTag\":\"amq.ctag-cpx9d4rkRRrmevXeYBwhmQ\",\"deliveryTag\":3,\"redelivered\":false,\"exchange\":\"\",\"routingKey\":\"queue.synchronizePokemon\"},\"properties\":{\"headers\":{\"traceparent\":\"00-bf8640c6c3bb1a358af2ed297cb082ea-443544d1de42bbe0-01\"}},\"content\":{\"type\":\"Buffer\",\"data\":[123,34,105,100,34,58,51,48,48,48,48,44,34,105,103,110,111,114,101,67,97,99,104,101,34,58,102,97,108,115,101,125]}}"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "consumer"
+            },
+            {
+              "key": "internal.span.format",
+              "type": "string",
+              "value": "otlp"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "pokeshop",
+          "tags": [
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "arm64"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "0a58ddf2fbef"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/app/api.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/usr/local/bin/node\",\"--require\",\"./telemetry/setup.js\",\"/app/api.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/usr/local/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "root"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 18
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "20.17.0"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.26.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "pokeshop-worker",
+          "tags": [
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "arm64"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "3b9be3d68df8"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/app/worker.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/usr/local/bin/node\",\"--require\",\"./telemetry/setup.js\",\"/app/worker.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/usr/local/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "root"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 17
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "20.17.0"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.26.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    }
+  ],
+  "total": 0,
+  "limit": 0,
+  "offset": 0,
+  "errors": null
+}
