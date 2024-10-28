@@ -1,6 +1,6 @@
 {
   "name": "@oscar-js/explain-my-trace",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Explains a given openTelemetry Trace",
   "keywords": [
     "opentelemetry",
