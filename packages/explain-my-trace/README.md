@@ -41,4 +41,4 @@ console.log(response)
 ```
 
 [npm-url]: https://www.npmjs.com/package/@oscar-js/explain-my-trace
-[npm-img]: https://badge.fury.io/js/%oscar-js%explain-my-trace.svg
+[npm-img]: https://badge.fury.io/js/%40oscar-js%2Fexplain-my-trace.svg
