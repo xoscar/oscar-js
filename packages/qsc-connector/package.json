@@ -2,20 +2,29 @@
   "name": "@oscar-js/qsc-connector",
   "version": "0.0.4",
   "description": "[![NPM Published Version][npm-img]][npm-url]",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://oscarreyes.me",
   "scripts": {
     "build": "tsc",
     "test": "jest"
   },
-  "author": "Oscar R. Reyes",
+  "author": "Oscar Reyes <oscar-rreyes1@hotmail.com>",
   "license": "ISC",
   "type": "module",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xoscar/oscar-js.git"
+    "url": "https://oscarreyes.me"
   },
   "keywords": [
     "qsc",
@@ -26,5 +35,9 @@
   "bugs": {
     "url": "https://github.com/xoscar/oscar-js/issues"
   },
-  "homepage": "https://github.com/xoscar/oscar-js#readme"
+  "devDependencies": {
+    "@types/args": "^5.0.3",
+    "@types/jest": "^29.5.13"
+  },
+  "gitHead": "6159dd5cb067979bfab98320b330c1f63ee111ad"
 }

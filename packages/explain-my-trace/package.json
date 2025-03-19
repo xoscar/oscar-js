@@ -6,7 +6,7 @@
     "opentelemetry",
     "explain"
   ],
-  "author": "Oscar Reyes <oscar-rreyes1@hotmail.io>",
+  "author": "Oscar Reyes <oscar-rreyes1@hotmail.com>",
   "homepage": "https://oscarreyes.me",
   "license": "ISC",
   "main": "dist/index.js",
@@ -41,5 +41,6 @@
   "devDependencies": {
     "@types/args": "^5.0.3",
     "@types/jest": "^29.5.13"
-  }
+  },
+  "gitHead": "6159dd5cb067979bfab98320b330c1f63ee111ad"
 }
