@@ -1,6 +1,6 @@
 {
   "name": "@oscar-js/qsc-connector",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "[![NPM Published Version][npm-img]][npm-url]",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
