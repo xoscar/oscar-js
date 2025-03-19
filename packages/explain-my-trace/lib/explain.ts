@@ -47,7 +47,7 @@ Display the response in a JSON format where each question defines the key and da
 Avoid adding the code formatting to the response.
 
 Questions:
-1. In a sequence of steps, separated by break lines, Could you explain what the process in the trace is doing? key: "description", data type: string
+1. In a sequence of steps, separated by line breaks, Could you explain what the process in the trace is doing? key: "description", data type: string
 2. Can you identify any errors or bugs in the process? Specify. key: errors, data type: array of objects, with "spanId", "operationName", "errorMessage" and "stackTrace" as keys
 3. Can you specify each of the services involved in the trace? And include a brief description of what each service does. key: services, data type: array of objects with "serviceName" and "description" as keys
 4. What programming languages are used in the trace per service? key: languages, data type: array of objects, with "serviceName" and "language" as keys

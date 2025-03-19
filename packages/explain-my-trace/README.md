@@ -4,7 +4,7 @@
 
 ## About
 
-This module provides an a simple way to breakdown OpenTelemetry based traces into human words, explaining the entire process, finding bugs and providing useful insights using OpenAI and LanChain. Currently only supports `Jaeger` and `Tempo` export formats.
+This module provides a simple way to breakdown OpenTelemetry based traces into human words, explaining the entire process, finding bugs and providing useful insights using OpenAI and LanChain. Currently only supports `Jaeger` and `Tempo` export formats.
 
 ## Install
 
